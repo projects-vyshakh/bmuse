@@ -31,3 +31,4 @@ Route::group(['middleware'=>['web','auth']], function(){
 
 
 Route::any('subscribers/sendNewsletter', 'EmailController@sendNewsletter');
+Route::any('subscribers/showNewsletterTemplate', 'EmailController@showNewsletterTemplate');

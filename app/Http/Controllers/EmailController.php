@@ -25,6 +25,14 @@ class EmailController extends Controller
 
         Mail::to('vyshakhps1988@gmail.com')->send(new NewsletterMail($details));
 
-        dd("Email is Sent.");
+    }
+
+    public function showNewsletterTemplate(){
+        $email = 'vyshakh@example.com';
+        $name   = "Vyshakh";
+
+
+        return view('emails.newsletter', ['name'=>$name, 'email'=>$email]);
+
     }
 }
